@@ -2768,14 +2768,14 @@ ul.bottom_menu li {
       padding: 10px;
     }
 
-    #sidebar ul li a {
+    /*#sidebar ul li a {
        padding: 10px 0;
        font-size: 20px;
        display: block;
        color: #222;
        font-weight: 300;
        letter-spacing: 1px;
-    }
+    }*/
     
     #sidebar ul li a:hover {
       color: #fc301e;
@@ -2797,15 +2797,21 @@ ul.bottom_menu li {
       float: left;
       width: 100%;
       border-bottom: solid #eee 1px;
+      line-height: 60px;
     }
-
-    #sidebar ul li.active>a,
-    a[aria-expanded="true"] {
-      color: #fff;
-      background: #6d7fcc;
-    }
+      .menu_section ul li a
+     {
+	text-decoration:none;
+	font-size: 18px;
+	padding-left: 40px;
+	font-weight: 500px;
+	display: block;
+	width: 100%;
+	border-left: 3px solid transparent;
+	}
+   
     
-    a[data-toggle="collapse"] {
+    /*a[data-toggle="collapse"] {
       position: relative;
     }
     
@@ -2821,25 +2827,62 @@ ul.bottom_menu li {
     
     a[aria-expanded="true"]::before {
       content: '\e260';
-    }
-    
-    ul ul a {
+    }*/
+    /*ul ul a {
       font-size: 0.9em !important;
       padding-left: 30px !important;
       background: #6d7fcc;
+      display: none;
+    }*/
+    .menu_section ul ul
+	{
+	position: static;
+	display:none;
+	}
+
+	.menu_section ul .Ecomm-item .show1
+	{
+		display: block;
+	}
+
+
+.menu_section ul ul li
+{
+	line-height: 30px;
+	border-bottom: none;
+}
+
+.menu_section ul ul li a
+{
+	font-size: 17px;
+	padding-left:60px;
+
+}
+.menu_section ul li a:hover
+{
+	background:#d01c39;
+	opacity:0.7;
+}
+
+.menu_sectionul ul li a i 
+{
+	position: absolute;
+	top: 100%;
+	right: 20%;
+	font-size: 22px;
+	transition: transform 0.4s;
+}
+.menu_section ul ul li a i:hover
+{
+	transform: translateY(-50%) rotate(-180deg);
+}
+
+     #sidebar ul li.active>a,
+    a[aria-expanded="true"] {
+      color: #fff;
+      background: #6d7fcc;
     }
     
-    ul.CTAs {
-      padding: 20px;
-    }
-    
-    ul.CTAs a {
-      text-align: center;
-      font-size: 0.9em !important;
-      display: block;
-      border-radius: 5px;
-      margin-bottom: 5px;
-    }
     
     a.download {
       background: #fff;
@@ -2995,6 +3038,13 @@ footer.footer-box .heading_main h2 {
     padding-bottom: 25px;
 }
 
-
-
-
+.drop-down ul {
+  display: block;
+  position: relative;
+  left: 0;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: ease all 0.3s;
+}

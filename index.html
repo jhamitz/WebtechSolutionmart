@@ -28,6 +28,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
    <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
       <!-- LOADER -->
@@ -42,8 +47,30 @@
          <div class="menu_section">
             <ul>
                <li><a href="index.html">Home</a></li>
-               <li><a href="about.html">About</a></li>
-               <li><a href="services.html">Services</a></li>
+               <li><a href="about.html">About-Us</a></li>
+                <li><a href="" class="Ecomm">Ecommerce
+                   <i class="fa fa-sort-desc first"></i>
+                </a>
+                   <ul class="Ecomm-item">
+                     <li><a href="#">Ecommerce Web</a></li>
+                     <li><a href="#">Payment Gateway</a></li>
+                  </ul>
+                </li>
+                <li><a href="" class="serv">Servicess
+                   <i class="fa fa-sort-desc second"></i>
+                </a>
+                   <ul class="serv-item">
+                     <li><a href="#">Internet Market</a></li>
+                     <li><a href="Website_Development.html">Website developement</a></li>
+                     <li><a href="websitedesign.html">Website Design</a></li>
+                     <li><a href="Mob_App.html">Mobile App developement</a></li>
+                  </ul>
+                </li>
+               </li>
+                <li><a href="contact.html">Hire Experts</a>
+                </li>
+                  <li><a href="#">Digital Marketing</a>
+                 <li><a href="services.html">Blogs</a></li>
                <li><a href="contact.html">Contact us</a></li>
             </ul>
          </div>
@@ -64,6 +91,13 @@
                </div>
             </div>
          </header>
+         <script>
+        $('.Ecomm').click(function()
+        {
+          $('menu_section ul .Ecomm-item').toggleClass("show1");
+        });
+      </script>
+
          <!-- End header -->
          <!-- Start Banner -->
          <div class="ulockd-home-slider">
