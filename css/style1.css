@@ -662,11 +662,6 @@ input[type='checkbox'] {
 	transition: all 0.2s ease;
 }
 
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link.active {
-	color: #00bfd8;
-}
-
 /* Dropdown Menu */
 
 @keyframes fadeDropdown {

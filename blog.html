@@ -24,10 +24,11 @@
       <link rel="stylesheet" href="css/responsive.css" />
       <!-- Custom CSS -->
       <link rel="stylesheet" href="css/custom.css" />
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
    <body id="services" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
       <!-- LOADER -->
@@ -38,9 +39,10 @@
       </div>
       <!-- END LOADER -->
       <div class="wrapper">
-      <nav id="sidebar"> <div class="menu_section">
+     <nav id="sidebar">
+         <div class="menu_section">
             <ul>
-               <li><a href="index.html">Home</a></li>
+               <li><a href="index.html" class="text-dark">Home</a></li>
                <li><a href="about.html">About-Us</a></li>
                 <li><a href="" class="Ecomm">Ecommerce
                    <i class="fa fa-sort-desc first"></i>
@@ -50,7 +52,17 @@
                      <li><a href="#">Payment Gateway</a></li>
                   </ul>
                 </li>
-                <li><a href="" class="serv">Ecommerce
+                <li><a href="#" class="digital">Digital Marketing
+                  <i class="fa fa-sort-desc"></i>
+                </a>
+                  <ul class="digital-item">
+                     <li><a href="#">Search_Engine_Optimization</a></li>
+                     <li><a href="Website_Development.html">Social_Media_Optimization</a></li>
+                     <li><a href="websitedesign.html">Pay_Per_Click</a></li>
+                   
+                  </ul>
+                </li>
+                <li><a href="" class="serv">Servicess
                    <i class="fa fa-sort-desc second"></i>
                 </a>
                    <ul class="serv-item">
@@ -60,11 +72,16 @@
                      <li><a href="Mob_App.html">Mobile App developement</a></li>
                   </ul>
                 </li>
-               </li>
-                <li><a href="contact.html">Hire Experts</a>
+                <li><a href="" class="hire">Hire Experts
+                  <i class="fa fa-sort-desc third"></i></a>
+
+                  <ul class="hire-item">
+                      <li><a href="#">Hire_Wp_Developer</a></li>
+                      <li><a href="">Hire_Php_Developer</a></li>
+                      <li><a href="">Hire_Megento_Developer</a></li>
+                  </ul>
                 </li>
-                  <li><a href="#">Digital Marketing</a>
-                 <li><a href="services.html">Blogs</a></li>
+                 <li><a href="blog.html">Blogs</a></li>
                <li><a href="contact.html">Contact us</a></li>
             </ul>
          </div>
@@ -85,11 +102,29 @@
                </div>
             </div>
          </header>
-         <!-- End header -->
-         <!-- section -->
-         
-         <!-- end section -->
-         <!-- section -->
+           <script>
+            $('.Ecomm').click(function()
+            {
+              $('.Ecomm-item').toggle();
+              return false;
+            });
+             $('.serv').click(function()
+            {
+              $('.serv-item').toggle();
+              return false;
+            });
+              $('.hire').click(function()
+            {
+            $('.hire-item').toggle();
+            return false;
+            });
+          $('.digital').click(function()
+            {
+            $('.digital-item').toggle();
+            return false;
+          });
+      </script>
+
         <div class="section layout_padding">
         <div class="container">
             <div class="row">
