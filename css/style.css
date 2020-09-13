@@ -141,7 +141,314 @@ a,
 	padding: 12px 40px;
 	font-size: 16px;
 }
+ul {
+    margin: 0;
+    padding: 0;
+}
+.toggle,
+[id^=drop] {
+    display: none;
+}
+nav {
+    margin: 0;
+    padding: 0;
+    
+}
 
+
+#logo a {
+    float: left;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: capitalize;
+}
+
+
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+    margin: 0px 1em;
+    display: inline-block;
+    float: left;
+}
+nav ul ul li {
+    margin: 0px 5px;
+    display: inline-block;
+    float: left;
+}
+
+ul.menu {
+    margin-top: 1em;
+}
+
+/* Styling the links */
+
+nav a {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 10px 0;
+    color: #4c5358;
+    border-bottom: 2px solid transparent;
+    font-weight: 600;
+}
+
+nav ul li ul li:hover {
+    background: #f5f6f7;
+}
+nav ul li ul li ul li:hover {
+    background: #f5f6f7;
+}
+
+/* Background color change on Hover */
+
+nav li a:hover {
+    color: #fc301e;
+    border-bottom: 2px solid #fc301e;
+
+}
+
+.menu li.active a {
+    color: #fc301e;
+    border-bottom: 2px solid #fc301e;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    padding: 10px;
+    z-index: 99;
+    -webkit-box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+nav ul ul ul {
+    display: none;
+    position: absolute;
+    top: 10px;
+    background: #fff;
+    padding: 20px;
+    z-index: 99;
+    -webkit-box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Display Dropdowns on Hover */
+
+nav ul li:hover > ul {
+    display: inherit;
+}
+nav ul li ul li:hover > ul {
+    display: inherit;
+}
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+nav ul ul ul li {
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul li a {
+    color: #333;
+    padding: 5px 10px;
+    display: block;
+}
+nav ul ul ul li a {
+    color: #333;
+    padding: 5px 1px;
+    display: block;
+}
+
+/* Second, Third and more Tiers 
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+
+nav ul ul ul li {
+    position: relative;
+   
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 20px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+
+li > a:only-child:after {
+    content: '';
+}
+
+@media all and (max-width:768px) {
+
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        padding: 7px 20px;
+        font-size: 17px;
+        text-decoration: none;
+        border: none;
+        float: right;
+        background-color: #f4f5f7;
+        color: #2d2c2c;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 700;
+        cursor: pointer !important;
+        margin-top: 0.5em;
+    }
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .toggle:hover {
+        color: #333;
+        background-color: #fff;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+        /* background: rgba(16, 16, 16, 0.85); */
+        padding: 15px 0;
+        text-align: center;
+        float: none;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+    nav ul li {
+        margin: 0px 0em;
+    }
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+    }
+    nav ul ul li a {
+        font-size: 0.9em;
+    }
+}
+
+@media all and (max-width: 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
 .lead {
 	font-size: 18px;
 	line-height: 30px;
@@ -403,207 +710,6 @@ a:hover,a:focus {
 	
 }
 
-/*------------------------------------------------------------------ 
-HEADER 
--------------------------------------------------------------------*/
-
-.header_top {
-    min-height: 98px;
-    padding: 8px 0;
-    background: #fff;
-}
-
-.site_information ul {
-    float: right;
-    width: 95%;
-    padding: 21px 0;
-}
-
-a.join_bt {
-    background: #00cc99;
-    width: 180px;
-    text-align: center;
-    height: 38px;
-    line-height: 38px;
-    border-radius: 75px;
-    color: #fff;
-    font-weight: 300;
-}
-
-a.join_bt:hover,
-a.join_bt:focus {
-	background: #222;
-	color: #fff !important;
-}
-
-.site_information {
-    float: left;
-    width: 66.66%;
-}
-
-.site_information ul {
-    list-style: none;
-}
-
-.site_information ul li {
-    float: left;
-    width: 33.33%;
-    display: flex;
-    justify-content: center;
-    font-size: 17px;
-    font-weight: 300;
-}
-
-.site_information ul li img {
-    margin-right: 10px;
-}
-
-.logo_section {
-    width: 33.33%;
-}
-
-.logo_main {
-    padding: 25px 0 0;
-}
-
-.top-header .navbar {
-    padding: 0;
-    min-height: 60px;
-    float: left;
-}
-
-.top-header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    margin: 0;
-    z-index: 20;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: auto 100%;
-    width: 100%;
-}
-
-.section {
-    float: left;
-    width: 100%;
-}
-
-.ulockd-home-slider {
-    float: left;
-    width: 100%;
-}
-
-.top-header .navbar .navbar-collapse ul li a {
-    text-transform: none;
-    font-size: 17px;
-    padding: 10px 25px;
-    font-weight: 400;
-    overflow: hidden;
-    color: #000;
-    position: relative;
-    z-index: 2;
-}
-
-a.navbar-brand {
-	left: 35px;
-	position: relative;
-}
-
-.top-header .navbar .navbar-collapse ul li a.active {
-	background: transparent;
-    color: #fff;
-}
-
-.top-header .navbar .navbar-collapse ul li a:hover, 
-.top-header .navbar .navbar-collapse ul li a:focus {
-    background: transparent;
-    color: #fff;
-}
-
-.search_icon.nav-link img {
-	width: 25px;
-}
-
-.top-header .navbar .navbar-collapse ul li {
-	margin: 0 2px;
-}
-
-.top-header.fixed-menu {
-	width: 100%;
-	position: fixed;
-	box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	-webkit-animation-name: fadeInDown;
-	animation-name: fadeInDown;
-	background: #fff;
-	z-index: 20;
-}
-
-.header_bottom {
-    float: left;
-    width: 100%;
-    position: absolute;
-    bottom: -60px;
-}
-
-.header_bottom::after {
-    width: 50%;
-    display: block;
-    right: 0;
-    content: "";
-    background: #ff880e;
-    height: 60px;
-    position: absolute;
-    top: 0;
-}
-
-.navbar-toggler {
-    border: 2px solid #fff;
-    border-radius: 0;
-    margin: 15px 0;
-    padding: 8px 8px;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-    z-index: 9;
-    position: relative;
-}
-
-.navbar-toggler span {
-	background: #fff;
-	display: block;
-	width: 22px;
-	height: 2px;
-	margin: 0 auto;
-	margin-top: 0px;
-	margin-top: 0px;
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
-	border-radius: 1px;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-}
-
-.navbar-toggler span+span {
-	margin-top: 5px;
-}
-
-.navbar-toggler:hover {
-	border: 2px solid #222;
-}
-
-.navbar-toggler:hover span {
-    background: #222;
-}
 
 
 /* search bar */
@@ -2712,208 +2818,14 @@ ul.bottom_menu li {
 
 /** sidebar **/
 
-.navbar {
-      padding: 15px 10px;
-      background: #fff;
-      border: none;
-      border-radius: 0;
-      margin-bottom: 40px;
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    }
-    
-    .navbar-btn {
-      box-shadow: none;
-      outline: none !important;
-      border: none;
-    }
-    
+.
     .line {
       width: 100%;
       height: 1px;
       border-bottom: 1px dashed #ddd;
       margin: 40px 0;
     }
-    /* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
     
-    #sidebar {
-      width: 300px;
-      position: fixed;
-      top: 0;
-      left: -301px;
-      height: 100vh;
-      z-index: 999;
-      background: #fff;
-      color: #fff !important;
-      transition: all 0.3s;
-    }
-    
-    #sidebar.active {
-      left: 0;
-    }
-    
-    #sidebar .sidebar-header {
-      padding: 20px;
-      background: #6d7fcc;
-    }
-    
-    #sidebar ul.components {
-      padding: 20px 0;
-      border-bottom: 1px solid #47748b;
-    }
-    
-    #sidebar ul p {
-      color: #fff;
-      padding: 10px;
-    }
-
-    /*#sidebar ul li a {
-       padding: 10px 0;
-       font-size: 20px;
-       display: block;
-       color: #222;
-       font-weight: 300;
-       letter-spacing: 1px;
-    }*/
-    
-    #sidebar ul li a:hover {
-      color: #fc301e;
-      background: #fff;
-    }
-    
-    .menu_section {
-      float: left;
-      width: 100%;
-      padding: 0 30px;
-    }
-
-    .menu_section ul {
-      float: left;
-      width: 100%;
-    }
-
-    .menu_section ul li {
-      float: left;
-      width: 100%;
-      border-bottom: solid #eee 1px;
-      line-height: 60px;
-    }
-      .menu_section ul li a
-     {
-	text-decoration:none;
-	font-size: 18px;
-	padding-left: 40px;
-	font-weight: 500px;
-	display: block;
-	width: 100%;
-	border-left: 3px solid transparent;
-	}
-   
-    
-    /*a[data-toggle="collapse"] {
-      position: relative;
-    }
-    
-    a[aria-expanded="false"]::before,
-    a[aria-expanded="true"]::before {
-      content: '\e259';
-      display: block;
-      position: absolute;
-      right: 20px;
-      font-family: 'Glyphicons Halflings';
-      font-size: 0.6em;
-    }
-    
-    a[aria-expanded="true"]::before {
-      content: '\e260';
-    }*/
-    /*ul ul a {
-      font-size: 0.9em !important;
-      padding-left: 30px !important;
-      background: #6d7fcc;
-      display: none;
-    }*/
-    .menu_section ul ul
-	{
-	position: static;
-	display:none;
-	}
-
-	.menu_section ul .Ecomm-item .show1
-	{
-		display: block;
-	}
-
-
-.menu_section ul ul li
-{
-	line-height: 30px;
-	border-bottom: none;
-}
-
-.menu_section ul ul li a
-{
-	font-size: 17px;
-	padding-left:40px;
-
-}
-.menu_section ul li a:hover
-{
-	background:#fc301e;;
-	opacity:0.7;
-}
-
-.menu_sectionul ul li a i 
-{
-	position: absolute;
-	top: 100%;
-	right: 20%;
-	font-size: 22px;
-	transition: transform 0.4s;
-}
-.menu_section ul ul li a i:hover
-{
-	transform: translateY(-50%) rotate(-180deg);
-}
-
-     #sidebar ul li.active>a,
-    a[aria-expanded="true"] {
-      color: #fff;
-      background: #6d7fcc;
-    }
-    
-    
-    a.download {
-      background: #fff;
-      color: #7386D5;
-    }
-    
-    a.article,
-    a.article:hover {
-      background: #6d7fcc !important;
-      color: #fff !important;
-    }
-    /* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-    
-    #content {
-      padding: 0;
-      min-height: 100vh;
-      transition: all 0.3s;
-      position: relative;
-      top: 0;
-      right: 0;
-      width: 100%;
-    }
-    
-    #content.active {
-      width: 100%;
-    }
-    /* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
     
 .heading_main h2 strong.small {
     font-size: 30px;

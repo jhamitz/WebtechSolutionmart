@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="css/pogo-slider.min.css" />
     <link rel="stylesheet" href="css/responsive.css" />
      <link rel="stylesheet" href="css/custom.css" />
+     <!---new--->
+     <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -45,12 +47,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <style>
-      .menu_section ul li a
-      {
-        color:#1f1f1f;
-      }
-  </style>
+ 
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
@@ -59,93 +56,78 @@
             <img src="images/loader.gif" alt="#" />
          </div>
       </div>
-      <!-- header -->
-      <div class="wrapper">
-       <nav id="sidebar">
-         <div class="menu_section">
-            <ul>
-               <li><a href="index.html" class="text-dark">Home</a></li>
-               <li><a href="about.html">About-Us</a></li>
-                <li><a href="" class="Ecomm">Ecommerce
-                   <i class="fa fa-sort-desc first"></i>
-                </a>
-                   <ul class="Ecomm-item">
-                     <li><a href="#">Ecommerce Web</a></li>
-                     <li><a href="#">Payment Gateway</a></li>
-                  </ul>
-                </li>
-                <li><a href="#" class="digital">Digital Marketing
-                  <i class="fa fa-sort-desc"></i>
-                </a>
-                  <ul class="digital-item">
-                     <li><a href="#">Search_Engine_Optimization</a></li>
-                     <li><a href="Website_Development.html">Social_Media_Optimization</a></li>
-                     <li><a href="websitedesign.html">Pay_Per_Click</a></li>
-                   
-                  </ul>
-                </li>
-                <li><a href="" class="serv">Servicess
-                   <i class="fa fa-sort-desc second"></i>
-                </a>
-                   <ul class="serv-item">
-                     <li><a href="#">Internet Market</a></li>
-                     <li><a href="Website_Development.html">Website developement</a></li>
-                     <li><a href="websitedesign.html">Website Design</a></li>
-                     <li><a href="Mob_App.html">Mobile App developement</a></li>
-                  </ul>
-                </li>
-                <li><a href="" class="hire">Hire Experts
-                  <i class="fa fa-sort-desc third"></i></a>
+       <!--new-->
+       <section class="main-content" id="home">
+        
+        <header>
+            <div class="container-fluid px-lg-5 px-3">
+                <!-- nav -->
+                <nav class="py-2 d-lg-flex">
+                    <div id="logo">
+                       <img src="images/Webp.net-resizeimage.png" alt="logo" style="width:200px;">
+                        </a>
+                    </div>
 
-                  <ul class="hire-item">
-                      <li><a href="">Hire_Wp_Developer</a></li>
-                      <li><a href="">Hire_Php_Developer</a></li>
-                      <li><a href="">Hire_Megento_Developer</a></li>
-                  </ul>
-                </li>
-                 <li><a href="blog.html">Blogs</a></li>
-               <li><a href="contact.html">Contact us</a></li>
-            </ul>
-         </div>
-      </nav>
-        <div id="content">
-         <!-- Start header -->
-         <header class="top-header">
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-6">
-                     <div class="logo_main">
-                        <a href="index.html"><img src="images/rename.png" /></a>
-                     </div>
-                  </div>
-                  <div class="col-sm-6">
-                     <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"><img src="images/menu_icon.png"></button>
-                  </div>
-               </div>
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" />
+                    <ul class="menu ml-auto">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Ecommerce <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Ecommerce<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2" />
+                            <ul class="inner-ul">
+                                <li><a href="#gallery">Ecommerce web</a></li>
+                                <li><a href="#stats">Payment Gateway</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-3" class="toggle">Digital Marketting <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Digital Marketting<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-3" />
+                            <ul class="inner-ul">
+                               <li><a href="seo1.html">Search Engine Optimization</a></li>
+                                <li><a href="Socialmedia.html">Social Media Optimization</a></li>
+                                <li><a href="payperclick.html">Pay Per Click</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-4" class="toggle">Services <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Services<span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-4" />
+                            <ul class="inner-ul">
+                                <li><a href="internet-marketting.html">Internet Marketting</a></li>
+                                <li><a href="Website_Development.html">Website Development</a></li>
+                                <li><a href="websitedesign.html">Web Design</a></li>
+                                <li><a href="Mob_App.html">Mobile App Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-5" class="toggle">Hire Expert <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Hire Expert <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-5" />
+                            <ul class="inner-ul">
+                                <li><a href="#gallery">Hire Wordpress Developer</a></li>
+                                <li><a href="#stats">Hire Php Developer</a></li>
+                                <li><a href="#posts">Hire Megento Developer</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </nav>
+                <!-- //nav -->
             </div>
-         </header>
-        <script>
-        $('.Ecomm').click(function()
-        {
-          $('.Ecomm-item').toggle();
-          return false;
-        });
-         $('.serv').click(function()
-        {
-          $('.serv-item').toggle();
-          return false;
-        });
-         $('.hire').click(function()
-         {
-            $('.hire-item').toggle();
-            return false;
-         });
-          $('.digital').click(function()
-         {
-            $('.digital-item').toggle();
-            return false;
-         });
-      </script>
+        </header>
+    </section>
 
          <!-- End header -->
          <!-- Start Banner -->
@@ -259,7 +241,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/StaffAugmentation.jpg" alt="alternative">
+                        <img class="img-fluid" src="images/word.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div>
                 <div class="col-lg-6">
@@ -285,7 +267,7 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/onlinereputationmanagement.png" alt="alternative">
+                        <img class="img-fluid" src="images/StaffAugmentation.jpg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
