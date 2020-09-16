@@ -18,6 +18,16 @@
       <link rel="stylesheet" href="css/style.css" />
       <link rel="stylesheet" href="css/responsive.css" />
       <link rel="stylesheet" href="css/custom.css" />
+      <style>
+        @media only screen and (max-width: 700px) 
+        {
+          #vid 
+          {
+            height: 450px;
+            width:400px;
+          }
+        }
+      </style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -322,10 +332,10 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="full text_align_center">
-                       <video width="520" height="440" controls>
-  							<source src="video.mp4" type="video/mp4">
-						</video>
-				 </div>
+                       <video id="vid" width="520px;" height="440px;">
+  							     <source src="video.mp4" type="video/mp4">
+						        </video>
+				    </div>
                      <div class="full center">
                         <a class="readmore_bt" href="about.html">Read More</a>
                       </div>
